@@ -775,7 +775,8 @@ function isExcludedElement(element) {
   /***************************************************************************************************/
   
   // Show Hide Main Widgets Div on Click
-  document.getElementById('uw-widget-custom-trigger').addEventListener('click', function() {
+document.getElementById('uw-widget-custom-trigger').addEventListener('click', function (event) {
+    event.preventDefault();
       openMain();
   });
   // document.getElementById('uw-widget-custom-trigger2').addEventListener('click', function() {
