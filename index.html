@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARREG</title>
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link href="css/ux4g-v1.0.1.css" rel="stylesheet">
+    <link href="css/html-template-1.css" rel="stylesheet">
+    <link href="css/accesibility-style_v1.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://img1.digitallocker.gov.in/nad/v-22/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/owl-carousel.css">
+    <style>
+        .accessibility.banner {
+            background-color: #e8f5e9;
+        }
+
+        #about-details {
+            display: none;
+        }
+
+        .service-card {
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+            .service-card img {
+                width: 80px;
+                height: 80px;
+                object-fit: contain;
+                margin-bottom: 15px;
+            }
+
+            .service-card h3 {
+                margin: 0;
+                min-height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                line-height: 1.3;
+            }
+
+        @media (max-width: 767px) {
+            .service-card {
+                height: 220px;
+            }
+        }
+
+        .our-ministers p,
+        .our-ministers h3 {
+            color: #3B3369;
+        }
+    </style>
+    <!--  <link rel="stylesheet" href="css/ux4g-v1.css">-->
+</head>
+    <body>
+        <header>
+            <div class="header-top px-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-3 d-flex col-sm-6 col-7 align-items-left">
+
+                            <span class="goi">
+                                <a href="https://www.india.gov.in/" target="_blank" class="goi">
+                                    <img src="https://doc.ux4g.gov.in/assets/img/icon/in-flag.png" class="img-fluid" alt="indian flag" loading="lazy"><strong>
+                                        Government of
+                                        West Bengal
+                                    </strong>
+                                </a>
+                            </span>
+                        </div>
+                        <div class="col-xl-6 col-lg-9 col-sm-6 col-5 text-end">
+                            <a href="#Skip-to-Main-Content" class="pr-5 d-none d-sm-inline" style="color: #fff;">
+                                Skip to Main Content
+                            </a>
+                            <span class="partition d-none d-md-inline">|</span>
+                            <span class=" d-none d-md-inline">
+
+                                <button role="button" id="btn-decrease" class="font01" onclick="decrease()">
+                                    -A
+                                </button>
+                                <button role="button" id="btn-orig" class="font01 active01" onclick="reset()">
+                                    A
+                                </button>
+
+                                <button role="button" id="btn-increase" class="font01" onclick="increase()">
+                                    A+
+                                </button><span class="partition ">|</span>
+
+                            </span>
+
+
+                            <!-- <span class="light_dark_icon">
+                                <input type="checkbox" class="light_mode" id="checkbox">
+                                <label for="checkbox" class="checkbox-label">
+                                    <i class="fas fa-moon"></i>
+                                    <i class="fas fa-sun"></i>
+                                    <span class="ball"></span>
+                                </label>
+                            </span> -->
+                            <span class="language01">
+                                <form id="langForm" method="POST" class="d-flex align-items-center">
+                                    <i class="glog-lang">
+                                        <img src="images/glob.svg" alt="glob">
+                                    </i>
+                                    <select name="language" id="changeLang" onchange="OnSelectedIndexChange()">
+                                        <option value="" selected="" disable="">Language</option>
+                                        <option value="en">English</option>
+                                    </select>
+                                </form>
+                            </span>
+                            <a class="skip01" id="uw-widget-custom-trigger" contenteditable="false" style="cursor: pointer;">
+                                <img src="images/accessible.svg" alt="Accessibility">
+                                <strong>More</strong>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="header-sticky" class="header-area shadow-sm header-white px-2 pt-2 pb-2 mt-sm-0">
+
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                        <div class="container-fluid pr-0 pl-0">
+                            <a class="navbar-brand" href="#">
+                                <img src="images/logo_golden.svg" alt="logo" loading="lazy">
+                                <!--<img src="images/emblem.png" height="40" width="24" alt="logo" loading="lazy">-->
+                            </a>
+                            <a class="navbar-brand" href="#">
+                                <a class="nav-link active" aria-current="page" href="#">Registrar General of Marriages</a>
+                                <!--<img src="images/logo2.png" alt="logo">-->
+                                <!--<img src="images/marreg_new_logo.png" alt="logo" height="40" width="40">-->
+                            </a>
+
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle"
+                                           href="#"
+                                           role="button"
+                                           data-bs-toggle="dropdown"
+                                           aria-expanded="false">
+                                            About Us
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Hierarchy</a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Who's Who?</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    Employee Directory
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">RTI Officials</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle"
+                                           href="#"
+                                           role="button"
+                                           data-bs-toggle="dropdown"
+                                           aria-expanded="false">
+                                            Services
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Objection</a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Transfer</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">FAQ</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Circulars</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Sitemap</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Certified Copy of Marriage Records</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search Marriage Records</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle"
+                                           href="#"
+                                           role="button"
+                                           data-bs-toggle="dropdown"
+                                           aria-expanded="false">
+                                            Payments
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    Offline Service Payment
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Payment Status</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">GRN Status</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle"
+                                           href="#"
+                                           role="button"
+                                           data-bs-toggle="dropdown"
+                                           aria-expanded="false">
+                                            Public Info
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Notice</a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">About MO</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search MO</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Fees</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Application Status</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Instructions</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Non Functional MO</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Prohibited Relationships</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Gallery</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link " aria-disabled="true">Contact Us</a>
+                                    </li>
+                                </ul>
+                                <button type="button" class="btn btn-primary">Login</button>
+                                <div class="search pl-30"><img src="images/marreg_new_logo_40.png" alt="logo" height="40" width="40"></div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+        </header>
+
+        <!-- banner -->
+        <section class="accessibility banner">
+            <div class="container">
+                <!-- slider -->
+                <div div class="owl-carousel owl-theme owl-loaded owl-drag">
+                    <div class="item    rounded mb-0 d-flex align-items-center justify-content-between">
+
+                        <div class="row accessibility-banner position-relative">
+                            <div class="col-sm-6 col-12">
+                                <div class="accessibility-banner-content">
+                                    <div class="text-center d-block d-md-none">
+                                        <img src="images/slideshow/Pic1.jpg" alt="Responsive" loading="lazy" style="height: 200px;">
+                                    </div>
+                                    <h1><span>The Hindu Marriage Act, 1955</span></h1>
+                                    <p>
+                                        <strong>
+                                            Application Can Be Submitted To Marriage Officer. After Social Marriage. Objection Period Is 7 Days From The Date Of Received Application. Marriage Should Be Registered Within 6 Calendar Months From The Date
+                                            Of Receipt Of Application.
+                                        </strong>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-12 text-end d-none d-sm-block">
+                                <div class="text-end">
+                                    <img src="images/slideshow/Pic1.jpg" alt="Responsive" loading="lazy" style="height: 350px;">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="item  rounded d-flex align-items-center justify-content-between">
+
+                        <div class="row accessibility-banner position-relative">
+                            <div class="col-sm-6 col-12">
+                                <div class="accessibility-banner-content">
+                                    <div class="text-center d-block d-md-none">
+                                        <img src="images/slideshow/Pic2.jpg" alt="Responsive" loading="lazy" style="height: 200px;">
+                                    </div>
+                                    <h1><span style="color: #30b5b2;"> The Special Marriage Act, 1954 (Under Section 13)</span></h1>
+                                    <p> <strong>Under This Act Of Marriage,Declaration/Solemnisation Process Should Start After 30 Days From The Date Of Receipt Of Notice Date And End Within 3 Months Of This Notice Period.</strong></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-12 d-none d-sm-block">
+                                <div class="text-end">
+                                    <img src="images/slideshow/Pic2.jpg" alt="Responsive" loading="lazy" style="height: 350px;">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="item  rounded d-flex align-items-center justify-content-between">
+
+                        <div class="row accessibility-banner position-relative">
+                            <div class="col-sm-6 col-12">
+                                <div class="accessibility-banner-content">
+                                    <div class="text-center d-block d-md-none">
+                                        <img src="images/slideshow/Pic3.jpg" alt="Responsive" loading="lazy" style="height: 200px;">
+                                    </div>
+                                    <h1><span style="color: #075705;">The Special Marriage Act, 1954 (Under Section 16)</span></h1>
+                                    <p><strong>Under This Act Of Marriage, Application Can Be Submitted To Marriage Officer At Least After 30days From The Date Of Marriage. Objection Period 30days From The Date Of Received Application. Marriage Should Be Registered Within 6 Calendar Months From The Date Of Received Application.</strong></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-12 d-none d-sm-block">
+                                <div class="text-end">
+                                    <img src="images/slideshow/Pic3.jpg" alt="Responsive" loading="lazy" style="height: 350px;">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="item  rounded d-flex align-items-center justify-content-between">
+
+                        <div class="row accessibility-banner position-relative">
+                            <div class="col-sm-6 col-12">
+                                <div class="accessibility-banner-content">
+                                    <div class="text-center d-block d-md-none">
+                                        <img src="images/slideshow/Pic4.jpg" alt="Responsive" loading="lazy" style="height: 200px;">
+                                    </div>
+                                    <h1><span style="color: #075705;">The Indian Christian Marriage Act, 1872</span></h1>
+                                    <p><strong>Under This Act Of Marriage, Both The Bride And The Groom Should Be More Than 21 Years Of Age. In Case Age Of Bride Is Below 21 Years But Above 18 Years In Such Cases, A Letter Of Consent Is Required From The Guardian/Parent.</strong></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-12 d-none d-sm-block">
+                                <div class="text-end">
+                                    <img src="images/slideshow/Pic4.jpg" alt="Responsive" loading="lazy" style="height: 350px;">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="item  rounded d-flex align-items-center justify-content-between">
+
+                        <div class="row accessibility-banner position-relative">
+                            <div class="col-sm-6 col-12">
+                                <div class="accessibility-banner-content">
+                                    <div class="text-center d-block d-md-none">
+                                        <img src="images/slideshow/Pic5.jpg" alt="Responsive" loading="lazy" style="height: 200px;">
+                                    </div>
+                                    <h1><span style="color: #075705;">The Parsi Marriage & Divorce Act, 1936</span></h1>
+                                    <p><strong>A Parsi Marriage Is Solemnised According To The Parsi Form Of Ceremony Called "Ashirvad" By A Priest In The Presence Of Two Parsi Witnesses Other Than Such Priest Or In The Case Of Any Parsi (Whether Such Parsi Has Changed His Or Her Religion Or Domicile Or Not).</strong></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-12 d-none d-sm-block">
+                                <div class="text-end">
+                                    <img src="images/slideshow/Pic5.jpg" alt="Responsive" loading="lazy" style="height: 350px;">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!-- slider end -->
+
+
+            </div>
+
+        </section>
+
+        <!-- latest-news -->
+        <section class="latest-news">
+            <div class="container">
+                <div class="latest-news-content d-flex align-items-center justify-content-between">
+                    <h5 class="d-flex gap-2"><img src="images/star.svg" alt="star"> LATEST</h5>
+                    <marquee behavior="" direction="">
+                        <span style="font-size:15px; vertical-align:central; color:red; margin-bottom:5px; text-transform:uppercase">
+                            << ALL MARRIAGE REGISTRARS who have been allowed by RGM to Register Marriages online should immediately start using the Portal >> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  << <span style="color:blue"> <b> Important Document </b> </span> >> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <asp:LinkButton ID="btnPDF" OnClick="DownloadFile" Font-Underline="false" CommandArgument="MARREG_Advt.pdf" runat="server" CssClass="lbl"> <span class="blink-image"> Click Here to Download &nbsp;&nbsp;&nbsp;<img style="width:25px; vertical-align:middle;" src="../images/icons/download_logo.svg"> </span></asp:LinkButton>
+                        </span>
+                    </marquee>
+                </div>
+            </div>
+        </section>
+
+        <!-- counter -->
+        <section class="counter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-3">
+                        <div class="counter_box text-center">
+                            <!--<img src="images/23x32.png" alt="icon">-->
+                            <h1>00000</h1>
+                            <p><b>Certificates Generated from 1st January of Current Year</b></p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-3">
+                        <div class="counter_box text-center">
+                            <!--<img src="images/23x32.png" alt="icon">-->
+                            <h1>00000</h1>
+                            <p> <b> Certificates Generated from 1st of Current Month</b> </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-3">
+                        <div class="counter_box text-center">
+                            <!--<img src="images/23x32.png" alt="icon">-->
+                            <h1>00000</h1>
+                            <p><b>Online MO</b></p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-3">
+                        <div class="counter_box text-center">
+                            <!--<img src="images/23x32.png" alt="icon">-->
+                            <h1>00000</h1>
+                            <p><b>Visitors Count</b></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="transparent-line text-center">
+                    <img src="images/line.svg" alt="line">
+                </div>
+            </div>
+        </section>
+
+        <!-- about section -->
+        <section class="about">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-sm-5">
+                        <div class="about-content" id="about_txt_eng">
+
+                            <h2>About Department</h2>
+
+                            <div id="about-short">
+                                <p>We register marriages.</p>
+                                <p>We add value to marriages.</p>
+                                <p>We devise innovative service delivery model for registration of marriages to benefit the citizen.</p>
+                                <p>As an application towards providing speedy services to the citizens, "<b>MARREG</b>" shall be totally web accessed.</p>
+                            </div>
+
+                            <div id="about-details">
+
+                                <p>
+                                    This shall enable greater mobility of registrars as the site may be
+                                    accessed from any location using Internet facilities from any ISP.
+                                </p>
+
+                                <p>
+                                    Overall responsibility to ensure that the policies and guidelines for
+                                    "<b>MARREG</b>" are properly implemented shall rest upon the
+                                    <b>Government of West Bengal</b> with
+                                    <b>O/o Registrar General of Marriages</b> exercising oversight function.
+                                </p>
+
+                                <p>
+                                    Computerisation of the process of registration of marriages necessitates
+                                    the need to preserve data in electronic form and aid that the incumbents
+                                    get a fair trial in the event of any dispute arising out of the marriage, viz.
+                                </p>
+
+                                <ul style="font-size: 14px">
+                                    <li>Polygamy / Polyandry</li>
+                                    <li>Legal separation</li>
+                                    <li>Grant of citizenship</li>
+                                    <li>Other legal and social angles</li>
+                                </ul>
+
+                            </div>
+
+                            <button type="button"
+                                    class="btn btn-primary btn-whit-outline"
+                                    id="aboutReadMore">
+                                Know More
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-1"></div>
+
+                    <div class="col-sm-6">
+                        <div class="position-relative about-c-img">
+                            <img src="images/rgm_wb.png" loading="lazy">
+                            <!--<img src="images/so_rgm_wb_218x218.png"
+                                 loading="lazy"
+                                 class="about-img2">
+
+                            <img src="images/ha_rgm_wb_206x206.png"
+                                 loading="lazy"
+                                 class="about-img3">
+
+                            <img src="images/uda_rg_wb_101x101.png"
+                                 loading="lazy"
+                                 class="about-img4">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Ministers -->
+        <section class="our-ministers">
+            <div class="container">
+                <div class="our-ministers-heading">
+                    <h2>Our Ministers</h2>
+                </div>
+                <div class="our-ministers-card">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <div class="card-modi-ji">
+                                <img src="images/cm_wb_282x282.png" alt="modi ji">
+                                <p>Hon’ble Chief Minister</p>
+                                <h3>Shri Suvendu Adhikari</h3>
+                                <div class="pmg-social d-flex gap-2 align-items-center justify-content-center mt-20">
+                                    <a href=""><img src="images/linkedin.svg" alt="linkedin"></a>
+                                    <a href=""><img src="images/facebook2.svg" alt="facebook"></a>
+                                    <a href=""><img src="images/instagram.svg" alt="instagram"></a>
+                                    <a href=""><img src="images/twitter2.svg" alt="linkedin"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="pmg-team">
+
+                                <div class="pmg-team-content d-flex gap-3 align-items-center">
+                                    <img src="images/mos_wb_218x218.png" alt="name">
+                                    <div class="pmg-team-title ashwini-ji">
+                                        <p>Hon'ble Minister of State, Law Department</p>
+                                        <h3>Shri Biraj Biswas</h3>
+                                    </div>
+                                </div>
+
+                                <div class="pmg-team-content d-flex flex-column align-items-center">
+                                    <img src="images/ps_wb_120x120.png" alt="name">
+                                    <div class="pmg-team-title minister-ji text-center">
+                                        <p>Principal Secretary, Law Department</p>
+                                        <h3>Shri Subhradip Mitra</h3>
+                                    </div>
+                                </div>
+
+                                <!--<div class="pmg-team-content d-flex flex-column align-items-center">
+                                    <img src="images/ps_wb_120x120.png" alt="name">
+                                    <div class="pmg-team-title minister-ji text-center">
+                                        <p>Minister of State </p>
+                                        <h3>Smt. Darshana Jardosh</h3>
+                                    </div>
+                                </div>-->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- our service -->
+
+        <section class="services-panel">
+            <div class="container">
+                <h2 class="section-heading mb-20">
+                    Our Services
+                </h2>
+
+                <!-- tab services -->
+                <div class="services-tab">
+                    <ul class="nav nav-tabs border-bottom-0 d-flex align-items-center justify-content-center" style="margin-bottom:60px" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="nav-accordion-one-tab" data-bs-toggle="tab" data-bs-target="#nav-accordion-one" type="button" role="tab" aria-controls="nav-accordion-one" aria-selected="false" tabindex="-1"> Main Services</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="nav-accordion-two-tab" data-bs-toggle="tab" data-bs-target="#nav-accordion-two" type="button" role="tab" aria-controls="nav-accordion-two" aria-selected="true"> Additional Services</button>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <!-- tab -->
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade faqPage active show" id="nav-accordion-one" role="tabpanel" aria-labelledby="nav-accordion-one-tab">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="service-card">
+                                    <img src="images/icons/apply_online.svg" alt="icon" loading="lazy">
+                                    <h3> Apply Online</h3>
+                                    <!--<p>Sub-Heading</p>-->
+                                </div>
+                            </div>
+                            <!--<div class="col-sm-3">
+                                <div class="service-card">
+                                    <img src="images/icons/objections.svg" alt="icon" loading="lazy">
+                                    <h3> Objection</h3>-->
+                                    <!--<p>Sub-Heading</p>-->
+                                <!--</div>
+                            </div>-->
+                            <div class="col-sm-3">
+                                <div class="service-card">
+                                    <img src="images/icons/transfers.svg" alt="icon" loading="lazy">
+                                    <h3>Transfer</h3>
+                                    <!--<p>Sub-Heading-2</p>-->
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="service-card">
+                                    <img src="images/icons/cc_badge.svg" alt="icon" loading="lazy">
+                                    <h3>Certified Copy of Marriage Records</h3>
+                                    <!--<p>Sub-Heading-3</p>-->
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="service-card">
+                                    <img src="images/icons/search.svg" alt="icon" loading="lazy">
+                                    <h3>Search Marriage Records</h3>
+                                    <!--<p>Sub-Heading-4</p>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade faqPage" id="nav-accordion-two" role="tabpanel" aria-labelledby="nav-accordion-two-tab">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="service-card">
+                                    <img src="images/icons/objections.svg" alt="icon" loading="lazy">
+                                    <h3>Objection</h3>
+                                    <!--<p>Sub-Heading-4</p>-->
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="service-card">
+                                    <img src="images/icons/faq.svg" alt="icon" loading="lazy">
+                                    <h3>FAQ</h3>
+                                    <!--<p>Sub-Heading-4</p>-->
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="service-card">
+                                    <img src="images/icons/circulars.svg" alt="icon" loading="lazy">
+                                    <h3>Circulars</h3>
+                                    <!--<p>Sub-Heading-4</p>-->
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="service-card">
+                                    <img src="images/icons/sitemap.svg" alt="icon" loading="lazy">
+                                    <h3>Sitemap</h3>
+                                    <!--<p>Sub-Heading-4</p>-->
+                                </div>
+                            </div>
+
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Station Gallery -->
+
+        <section class="station-gallery">
+            <div class="container">
+                <h2 class="section-heading mb-20">
+                    Gallery
+                </h2>
+
+                <!-- tab services -->
+                <div class="services-tab">
+                    <ul class="state-tab-nav nav nav-tabs border-bottom-0 d-flex align-items-center gap-3" style="margin-bottom:60px" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="nav-accordion-three-tab" data-bs-toggle="tab" data-bs-target="#nav-accordion-three" type="button" role="tab" aria-controls="nav-accordion-three" aria-selected="false" tabindex="-1">Celebrations</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="nav-accordion-four-tab" data-bs-toggle="tab" data-bs-target="#nav-accordion-four" type="button" role="tab" aria-controls="nav-accordion-four" aria-selected="true">Rewards</button>
+                        </li>
+                        <!-- <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="nav-accordion-five-tab" data-bs-toggle="tab" data-bs-target="#nav-accordion-five" type="button" role="tab" aria-controls="nav-accordion-five" aria-selected="true"> East Coast Railway</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="nav-accordion-six-tab" data-bs-toggle="tab" data-bs-target="#nav-accordion-six" type="button" role="tab" aria-controls="nav-accordion-six" aria-selected="true">Eastern Railway</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="nav-accordion-seven-tab" data-bs-toggle="tab" data-bs-target="#nav-accordion-seven" type="button" role="tab" aria-controls="nav-accordion-seven" aria-selected="true">Central Railway</button>
+                        </li> -->
+
+
+                    </ul>
+                </div>
+                <!-- tab -->
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade faqPage active show" id="nav-accordion-three" role="tabpanel" aria-labelledby="nav-accordion-three-tab">
+
+                        <ul class="station-tab nav nav-tabs border-bottom-0 d-flex align-items-center justify-content-center gap-3" style="margin-bottom:60px" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="nav-accordion-state-1-tab" data-bs-toggle="tab" data-bs-target="#nav-accordion-state-1" type="button" role="tab" aria-controls="nav-accordion-state-1" aria-selected="false" tabindex="-1">Republic Day</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="nav-accordion-state-2-tab" data-bs-toggle="tab" data-bs-target="#nav-accordion-state-2" type="button" role="tab" aria-controls="nav-accordion-state-2" aria-selected="true">Independence Day</button>
+                            </li>
+
+
+                        </ul>
+                        <div class="tab-content" id="nav-tabContent-state">
+                            <div class="state-carousel-1 tab-pane fade faqPage active show" id="nav-accordion-state-1" role="tabpanel" aria-labelledby="nav-accordion-state-1-tab">
+                                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="row mb-20">
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+
+                                            <div class="row mb-20">
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+
+                                            <div class="row mb-20">
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="state-carousel-1 tab-pane fade faqPage" id="nav-accordion-state-2" role="tabpanel" aria-labelledby="nav-accordion-state-2-tab">
+                                <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="true">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="row mb-20">
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="row mb-20">
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="carousel-item">
+
+                                            <div class="row mb-20">
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade faqPage" id="nav-accordion-four" role="tabpanel" aria-labelledby="nav-accordion-four-tab">
+                        <!-- tab  -->
+                        <ul class="station-tab nav nav-tabs border-bottom-0 d-flex align-items-center justify-content-center gap-3" style="margin-bottom:60px" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="nav-accordion-state-3-tab" data-bs-toggle="tab" data-bs-target="#nav-accordion-state-3" type="button" role="tab" aria-controls="nav-accordion-state-3" aria-selected="false" tabindex="-1">Reward Ceremony</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="nav-accordion-state-4-tab" data-bs-toggle="tab" data-bs-target="#nav-accordion-state-4" type="button" role="tab" aria-controls="nav-accordion-state-4" aria-selected="true">General</button>
+                            </li>
+
+
+                        </ul>
+                        <div class="tab-content" id="nav-tabContent-state">
+                            <div class="state-carousel-1 tab-pane fade faqPage active show" id="nav-accordion-state-3" role="tabpanel" aria-labelledby="nav-accordion-state-3-tab">
+                                <div id="carouselExampleIndicators3" class="carousel slide" data-bs-ride="true">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="row mb-20">
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="row mb-20">
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="carousel-item">
+
+                                            <div class="row mb-20">
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators3" 3 data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="state-carousel-1 tab-pane fade faqPage" id="nav-accordion-state-4" role="tabpanel" aria-labelledby="nav-accordion-state-4-tab">
+                                <div id="carouselExampleIndicators4" class="carousel slide" data-bs-ride="true">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="row mb-20">
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+
+                                            <div class="row mb-20">
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+
+                                            <div class="row mb-20">
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!-- tab  end-->
+                    </div>
+
+                    <!-- <div class="tab-pane fade faqPage" id="nav-accordion-five" role="tabpanel" aria-labelledby="nav-accordion-five-tab">
+                      5
+                    </div>
+                    <div class="tab-pane fade faqPage" id="nav-accordion-six" role="tabpanel" aria-labelledby="nav-accordion-six-tab">
+                      6
+                    </div>
+                    <div class="tab-pane fade faqPage" id="nav-accordion-seven" role="tabpanel" aria-labelledby="nav-accordion-seven-tab">
+                      7
+                    </div>
+                     -->
+
+
+                </div>
+
+
+            </div>
+        </section>
+
+       
+
+        <!-- footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-row">
+                    <div class="col-list">
+
+                        <!--<div class="footer_social">
+
+                            <a href="" target="_blank" aria-label="visit facebook site" contenteditable="false" style="cursor: pointer;">
+                                <img src="images/facebook2.svg" alt="social">
+                            </a>
+                            <a href="" target="_blank" aria-label="visit twitter site" contenteditable="false" style="cursor: pointer;">
+                                <img src="images/youtube2.svg" alt="social">
+                            </a>
+                            <a href="" target="_blank" aria-label="visit youtube site" contenteditable="false" style="cursor: pointer;">
+                                <img src="images/twitter2.svg" alt="social">
+                            </a>
+
+                        </div>-->
+
+                        <!--<div class="btn-group d-flex flex-column gap-3 mb-4">
+                            <button class="btn btn-outline-light rounded-pill">Recruitment</button>
+                            <button class="btn btn-outline-light rounded-pill">Tenders</button>
+                        </div>-->
+
+                        <button class=" rounded btn-last-update p-0">Last updated: 02-20-24</button>
+
+                    </div>
+                    <div class="col-list">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="">Govt of India</a></li>
+                            <li><a href="">Web Directory</a></li>
+                            <li><a href="">Digital India</a></li>
+                            <li><a href="">National Govt Services Portal</a></li>
+                            <li><a href="">Acts</a></li>
+                            <li><a href="">RTI</a></li>
+                            <li><a href="">Egiye Bangla</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-list">
+                        <h3>About Us</h3>
+                        <ul>
+                            <li><a href="">Hierarchy</a></li>
+                            <li><a href="">Who's Who?</a></li>
+                            <li><a href="">Employee Directory</a></li>
+                            <li><a href="">RTI Officials</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-list">
+                        <h3>Public Info</h3>
+                        <ul>
+                            <li><a href="">Notice</a></li>
+                            <li><a href="">About MO</a></li>
+                            <li><a href="">Search MO</a></li>
+                            <li><a href="">Fees</a></li>
+                            <li><a href="">Application Status</a></li>
+                            <li><a href="">Instructions</a></li>
+                            <li><a href="">Non Functional MO</a></li>
+                            <li><a href="">Prohibited Relationships</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-list">
+                        <h3>Suggestions</h3>
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="">Feedback</a></li>
+                            <li><a href="">Award</a></li>
+                        </ul>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+        <div class="terms">
+            <div class="container">
+                <ul>
+                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Contact Us</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- accessibility html -->
+        <!-- accessibility panel -->
+        <div class="uwaw uw-light-theme gradient-head uwaw-initial paid_widget"
+             id="uw-main">
+            <div class="relative second-panel">
+                <h3>Accessibility options by UX4G</h3>
+                <div class="uwaw-close" onclick="closeMain()"></div>
+            </div>
+            <div class="uwaw-body">
+                <div class="lang">
+                    <div class="lang_head">
+                        <i></i>
+                        <span>Language</span>
+
+                    </div>
+                    <div class="language_drop" id="google_translate_element">
+                        <!-- google translate list coming inside here -->
+                    </div>
+                </div>
+                <div class="h-scroll">
+                    <div class="uwaw-features">
+                        <div class="uwaw-features__item reset-feature" id="featureItem_sp">
+                            <button id="speak"
+                                    class="uwaw-features__item__i"
+                                    data-uw-reader-content="Enable the UserWay screen reader"
+                                    aria-label="Enable the UserWay screen reader"
+                                    aria-pressed="false">
+                                <span class="uwaw-features__item__icon">
+                                    <span class="icon icon-speaker"> </span>
+                                </span>
+                                <span class="uwaw-features__item__name">Screen Reader</span>
+                                <span class="tick-active uwaw-features__item__enabled reset-tick"
+                                      id="tickIcon_sp"
+                                      style="display: none">
+                                </span>
+                            </button>
+                        </div>
+
+                        <div class="uwaw-features__item reset-feature" id="featureItem">
+                            <button id="btn-s9"
+                                    class="uwaw-features__item__i"
+                                    data-uw-reader-content="Enable the UserWay screen reader"
+                                    aria-label="Enable the UserWay screen reader"
+                                    aria-pressed="false">
+                                <span class="uwaw-features__item__icon">
+                                    <span class="icon icon-bigger-text"> </span>
+                                </span><span class="uwaw-features__item__name">Bigger Text</span>
+                                <div class="uwaw-features__item__steps reset-steps"
+                                     id="featureSteps">
+                                    <!-- Steps span tags will be dynamically added here -->
+                                </div>
+                                <span class="tick-active uwaw-features__item__enabled reset-tick"
+                                      id="tickIcon"
+                                      style="display: none">
+                                </span>
+                            </button>
+                        </div>
+
+                        <div class="uwaw-features__item reset-feature" id="featureItem-st">
+                            <button id="btn-small-text"
+                                    class="uwaw-features__item__i"
+                                    data-uw-reader-content="Enable the UserWay screen reader"
+                                    aria-label="Enable the UserWay screen reader"
+                                    aria-pressed="false">
+                                <span class="uwaw-features__item__icon">
+                                    <span class="icon icon-small-text"> </span>
+                                </span><span class="uwaw-features__item__name">Small Text</span>
+                                <div class="uwaw-features__item__steps reset-steps"
+                                     id="featureSteps-st">
+                                    <!-- Steps span tags will be dynamically added here -->
+                                </div>
+                                <span class="tick-active uwaw-features__item__enabled reset-tick"
+                                      id="tickIcon-st"
+                                      style="display: none">
+                                </span>
+                            </button>
+                        </div>
+
+                        <div class="uwaw-features__item reset-feature" id="featureItem-lh">
+                            <button id="btn-s12"
+                                    class="uwaw-features__item__i"
+                                    data-uw-reader-content="Enable the UserWay screen reader"
+                                    aria-label="Enable the UserWay screen reader"
+                                    aria-pressed="false">
+                                <span class="uwaw-features__item__icon">
+                                    <span class="icon icon-line-hight"> </span>
+                                </span>
+                                <span class="uwaw-features__item__name">Line Height</span>
+                                <div class="uwaw-features__item__steps reset-steps"
+                                     id="featureSteps-lh">
+                                    <!-- Steps span tags will be dynamically added here -->
+                                </div>
+                                <span class="tick-active uwaw-features__item__enabled reset-tick"
+                                      id="tickIcon-lh"
+                                      style="display: none">
+                                </span>
+                            </button>
+                        </div>
+
+                        <div class="uwaw-features__item reset-feature" id="featureItem-ht">
+                            <button id="btn-s10"
+                                    onclick="highlightLinks()"
+                                    class="uwaw-features__item__i"
+                                    data-uw-reader-content="Enable the UserWay screen reader"
+                                    aria-label="Enable the UserWay screen reader"
+                                    aria-pressed="false">
+                                <span class="uwaw-features__item__icon">
+                                    <span class="icon icon-highlight-links"> </span>
+                                </span>
+                                <span class="uwaw-features__item__name">Highlight Links</span>
+                                <span class="tick-active uwaw-features__item__enabled reset-tick"
+                                      id="tickIcon-ht"
+                                      style="display: none">
+                                </span>
+                            </button>
+                        </div>
+
+                        <div class="uwaw-features__item reset-feature" id="featureItem-ts">
+                            <button id="btn-s13"
+                                    onclick="increaseAndReset()"
+                                    class="uwaw-features__item__i"
+                                    data-uw-reader-content="Enable the UserWay screen reader"
+                                    aria-label="Enable the UserWay screen reader"
+                                    aria-pressed="false">
+                                <span class="uwaw-features__item__icon">
+                                    <span class="icon icon-text-spacing"> </span>
+                                </span>
+                                <span class="uwaw-features__item__name">Text Spacing</span>
+                                <div class="uwaw-features__item__steps reset-steps"
+                                     id="featureSteps-ts">
+                                    <!-- Steps span tags will be dynamically added here -->
+                                </div>
+                                <span class="tick-active uwaw-features__item__enabled reset-tick"
+                                      id="tickIcon-ts"
+                                      style="display: none">
+                                </span>
+                            </button>
+                        </div>
+
+                        <div class="uwaw-features__item reset-feature" id="featureItem-df">
+                            <button id="btn-df"
+                                    onclick="toggleFontFeature()"
+                                    class="uwaw-features__item__i"
+                                    data-uw-reader-content="Enable the UserWay screen reader"
+                                    aria-label="Enable the UserWay screen reader"
+                                    aria-pressed="false">
+                                <span class="uwaw-features__item__icon">
+                                    <span class="icon icon-dyslexia-font"> </span>
+                                </span>
+                                <span class="uwaw-features__item__name">Dyslexia Friendly</span>
+                                <span class="tick-active uwaw-features__item__enabled reset-tick"
+                                      id="tickIcon-df"
+                                      style="display: none">
+                                </span>
+                            </button>
+                        </div>
+
+                        <div class="uwaw-features__item reset-feature" id="featureItem-hi">
+                            <button id="btn-s11"
+                                    onclick="toggleImages()"
+                                    class="uwaw-features__item__i"
+                                    data-uw-reader-content="Enable the UserWay screen reader"
+                                    aria-label="Enable the UserWay screen reader"
+                                    aria-pressed="false">
+                                <span class="uwaw-features__item__icon">
+                                    <span class="icon icon-hide-images"> </span>
+                                </span>
+                                <span class="uwaw-features__item__name">Hide Images</span>
+                                <span class="tick-active uwaw-features__item__enabled reset-tick"
+                                      id="tickIcon-hi"
+                                      style="display: none">
+                                </span>
+                            </button>
+                        </div>
+
+                        <div class="uwaw-features__item reset-feature"
+                             id="featureItem-Cursor">
+                            <button id="btn-cursor"
+                                    onclick="toggleCursorFeature()"
+                                    class="uwaw-features__item__i"
+                                    data-uw-reader-content="Enable the UserWay screen reader"
+                                    aria-label="Enable the UserWay screen reader"
+                                    aria-pressed="false">
+                                <span class="uwaw-features__item__icon">
+                                    <span class="icon icon-cursor"> </span>
+                                </span>
+                                <span class="uwaw-features__item__name">Cursor</span>
+                                <span class="tick-active uwaw-features__item__enabled reset-tick"
+                                      id="tickIcon-cursor"
+                                      style="display: none">
+                                </span>
+                            </button>
+                        </div>
+
+                        <div class="uwaw-features__item reset-feature"
+                             id="featureItem-ht-dark">
+                            <button id="dark-btn"
+                                    class="uwaw-features__item__i"
+                                    data-uw-reader-content="Enable the UserWay screen reader"
+                                    aria-label="Enable the UserWay screen reader"
+                                    aria-pressed="false">
+                                <span class="uwaw-features__item__name">
+                                    <span class="light_dark_icon">
+                                        <input type="checkbox"
+                                               class="light_mode uwaw-featugres__item__i"
+                                               id="checkbox" />
+                                        <label for="checkbox" class="checkbox-label">
+                                            <!-- <i class="fas fa-moon-stars"></i> -->
+                                            <i class="fas fa-moon-stars">
+                                                <span class="icon icon-moon"></span>
+                                            </i>
+                                            <i class="fas fa-sun">
+                                                <span class="icon icon-sun"></span>
+                                            </i>
+                                            <span class="ball"></span>
+                                        </label>
+                                    </span>
+                                    <span class="uwaw-features__item__name">Light-Dark</span>
+                                </span>
+                                <span class="tick-active uwaw-features__item__enabled reset-tick"
+                                      id="tickIcon-ht-dark"
+                                      style="display: none; pointer-events: none">
+                                </span>
+                            </button>
+                        </div>
+
+                        <!-- Invert Colors Widget -->
+
+                        <div class="uwaw-features__item reset-feature" id="featureItem-ic">
+                            <button id="btn-invert"
+                                    class="uwaw-features__item__i"
+                                    data-uw-reader-content="Enable the UserWay screen reader"
+                                    aria-label="Enable the UserWay screen reader"
+                                    aria-pressed="false">
+                                <span class="uwaw-features__item__icon">
+                                    <span class="icon icon-invert"> </span>
+                                </span>
+                                <span class="uwaw-features__item__name">Invert Colors</span>
+                                <span class="tick-active uwaw-features__item__enabled reset-tick"
+                                      id="tickIcon-ic"
+                                      style="display: none">
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Reset Button -->
+
+            </div>
+            <div class="reset-panel">
+
+                <!-- copyright accessibility bar -->
+                <div class="copyrights-accessibility">
+                    <button class="btn-reset-all" id="reset-all" onclick="resetAll()">
+                        <span class="reset-icon"> </span>
+                        <span class="reset-btn-text">Reset All Settings</span>
+                    </button>
+                    <a href="https://www.ux4g.gov.in"
+                       target="_blank"
+                       class="copyright-text">
+                        <span class="uwaw-features__item__name ux4g-copy ux4g-copyright">Created by</span>
+                        <img src="images/ux4g-logo.svg"
+                             alt="logo"
+                             loading="lazy"
+                             width="93"
+                             height="25" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<!-- JS here -->
+<script src="https://img1.digitallocker.gov.in/nad/v-22/assets/js/jquery.min.js"></script>
+<script src="https://img1.digitallocker.gov.in/ux4g/UX4G@1.0.0-beta1/js/ux4g.bundle.min.js"></script>
+
+<!-- google translate -->
+<!-- Google Translate Code -->
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="js/google-translate.js"></script>
+<!-- End Google Translate Code -->
+<!-- accessibility -->
+<script src="js/weights.js"></script>
+<!-- font increase -->
+<script>
+
+    var $affectedElements = $("*"); // Can be extended, ex. $("div, p, span.someClass")
+
+    // Storing the original size in a data attribute so size can be reset
+    $affectedElements.each(function () {
+        var $this = $(this);
+        $this.data("orig-size", $this.css("font-size"));
+    });
+
+    $("#btn-increase").click(function () {
+        changeFontSize(1);
+    })
+
+    $("#btn-decrease").click(function () {
+        changeFontSize(-1);
+    })
+
+    $("#btn-orig").click(function () {
+        $affectedElements.each(function () {
+            var $this = $(this);
+            $this.css("font-size", $this.data("orig-size"));
+        });
+    })
+
+    function changeFontSize(direction) {
+        $affectedElements.each(function () {
+            var $this = $(this);
+            $this.css("font-size", parseInt($this.css("font-size")) + direction);
+        });
+    }
+</script>
+
+<!-- light dark theme -->
+
+<script>
+    const checkbox = document.getElementById("checkbox");
+    const isDarkMode = localStorage.getItem("darkMode") === "true";
+    checkbox.checked = isDarkMode;
+    const toggleDarkMode = () => {
+        const isDarkMode = checkbox.checked;
+        document.body.classList.toggle("dark", isDarkMode);
+        localStorage.setItem("darkMode", isDarkMode);
+    };
+    checkbox.addEventListener("change", toggleDarkMode);
+    toggleDarkMode();
+</script>
+
+<style>
+    .accessibility.banner {
+        background-color: #e8f5e9;
+    }
+
+    /* Fix dropdown item wrapping */
+    .navbar .dropdown-menu {
+        width: max-content;
+        min-width: 200px;
+    }
+
+        .navbar .dropdown-menu .dropdown-item {
+            white-space: nowrap;
+        }
+</style>
+
+<script src="js/owl.carousel.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        var owl = $('.owl-carousel');
+
+        owl.owlCarousel({
+            lazyLoad: true,
+            loop: true,
+            autoWidth: false,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            nav: true,
+            dots: true,
+            margin: 0,
+
+            navText: [
+                "<i class='fa fa-arrow-left' aria-hidden='true'></i>",
+                "<i class='fa fa-arrow-right' aria-hidden='true'></i>"
+            ],
+
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                769: {
+                    items: 1
+                }
+            }
+        });
+       });
+</script>
+<script>
+    document.getElementById("aboutReadMore").addEventListener("click", function () {
+
+        const details = document.getElementById("about-details");
+
+        if (details.style.display === "none" || details.style.display === "") {
+            details.style.display = "block";
+            this.innerText = "Show Less";
+        } else {
+            details.style.display = "none";
+            this.innerText = "Know More";
+        }
+
+    });
+</script>
+
+
