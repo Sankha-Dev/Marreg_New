@@ -8,6 +8,21 @@
      <link rel="stylesheet" href="css/owl-carousel.css"/>
     <script src="js/owl.carousel.min.js"></script>
 <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var readMoreButton = document.getElementById("aboutReadMore");
+        var details = document.getElementById("about-details");
+
+        if (!readMoreButton || !details) {
+            return;
+        }
+
+        readMoreButton.addEventListener("click", function () {
+            var isExpanded = details.style.display === "block";
+            details.style.display = isExpanded ? "none" : "block";
+            readMoreButton.textContent = isExpanded ? "Know More" : "Show Less";
+            readMoreButton.setAttribute("aria-expanded", String(!isExpanded));
+        });
+    });
     $(document).ready(function () {
 
         var owl = $('.owl-carousel');
@@ -40,19 +55,6 @@
                 }
             }
         });
-    });
-    document.getElementById("aboutReadMore").addEventListener("click", function () {
-
-        const details = document.getElementById("about-details");
-
-        if (details.style.display === "none" || details.style.display === "") {
-            details.style.display = "block";
-            this.innerText = "Show Less";
-        } else {
-            details.style.display = "none";
-            this.innerText = "Know More";
-        }
-
     });
 </script>
      <!-- banner -->
@@ -279,7 +281,7 @@
 
                             </div>
 
-                            <button type="button" class="btn btn-primary btn-whit-outline" id="aboutReadMore"> Know More </button>
+                             <button type="button" class="btn btn-primary btn-whit-outline" id="aboutReadMore" aria-controls="about-details" aria-expanded="false">Know More</button>
 
                         </div>
                     </div>

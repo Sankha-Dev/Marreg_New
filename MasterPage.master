@@ -154,7 +154,7 @@
                                 <img src="images/logo_golden.svg" alt="logo" loading="lazy">
                                 <!--<img src="images/emblem.png" height="40" width="24" alt="logo" loading="lazy">-->
                             </a>
-                            <a class="navbar-brand nav-link active" aria-current="page" href="#">Registrar General of Marriages</a>
+                            <a class="nav-link active" aria-current="page" href="#">Registrar General of Marriages</a>
 
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
