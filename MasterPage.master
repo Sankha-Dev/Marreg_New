@@ -387,11 +387,11 @@
 
         <!-- accessibility html -->
         <!-- accessibility panel -->
-        <div class="uwaw uw-light-theme gradient-head uwaw-initial paid_widget"
-             id="uw-main">
+        <aside class="uwaw uw-light-theme gradient-head uwaw-initial paid_widget"
+             id="uw-main" aria-label="Accessibility options">
             <div class="relative second-panel">
                 <h3>Accessibility options by UX4G</h3>
-                <div class="uwaw-close" onclick="closeMain()"></div>
+                <button type="button" class="uwaw-close" aria-label="Close accessibility options" onclick="closeMain()"></button>
             </div>
             <div class="uwaw-body">
                 <div class="lang">
@@ -410,7 +410,7 @@
                             <button type="button" id="speak"
                                     class="uwaw-features__item__i"
                                     data-uw-reader-content="Enable the UserWay screen reader"
-                                    aria-label="Enable the UserWay screen reader"
+                                    aria-label="Read page aloud"
                                     aria-pressed="false">
                                 <span class="uwaw-features__item__icon">
                                     <span class="icon icon-speaker"> </span>
@@ -427,7 +427,7 @@
                             <button type="button" id="btn-s9"
                                     class="uwaw-features__item__i"
                                     data-uw-reader-content="Enable the UserWay screen reader"
-                                    aria-label="Enable the UserWay screen reader"
+                                    aria-label="Increase text size"
                                     aria-pressed="false">
                                 <span class="uwaw-features__item__icon">
                                     <span class="icon icon-bigger-text"> </span>
@@ -447,7 +447,7 @@
                             <button type="button" id="btn-small-text"
                                     class="uwaw-features__item__i"
                                     data-uw-reader-content="Enable the UserWay screen reader"
-                                    aria-label="Enable the UserWay screen reader"
+                                    aria-label="Decrease text size"
                                     aria-pressed="false">
                                 <span class="uwaw-features__item__icon">
                                     <span class="icon icon-small-text"> </span>
@@ -467,7 +467,7 @@
                             <button type="button" id="btn-s12"
                                     class="uwaw-features__item__i"
                                     data-uw-reader-content="Enable the UserWay screen reader"
-                                    aria-label="Enable the UserWay screen reader"
+                                    aria-label="Increase line height"
                                     aria-pressed="false">
                                 <span class="uwaw-features__item__icon">
                                     <span class="icon icon-line-hight"> </span>
@@ -486,10 +486,9 @@
 
                         <div class="uwaw-features__item reset-feature" id="featureItem-ht">
                             <button type="button" id="btn-s10"
-                                    onclick="highlightLinks()"
                                     class="uwaw-features__item__i"
                                     data-uw-reader-content="Enable the UserWay screen reader"
-                                    aria-label="Enable the UserWay screen reader"
+                                    aria-label="Highlight links"
                                     aria-pressed="false">
                                 <span class="uwaw-features__item__icon">
                                     <span class="icon icon-highlight-links"> </span>
@@ -504,10 +503,9 @@
 
                         <div class="uwaw-features__item reset-feature" id="featureItem-ts">
                             <button type="button" id="btn-s13"
-                                    onclick="increaseAndReset()"
                                     class="uwaw-features__item__i"
                                     data-uw-reader-content="Enable the UserWay screen reader"
-                                    aria-label="Enable the UserWay screen reader"
+                                    aria-label="Increase text spacing"
                                     aria-pressed="false">
                                 <span class="uwaw-features__item__icon">
                                     <span class="icon icon-text-spacing"> </span>
@@ -526,10 +524,9 @@
 
                         <div class="uwaw-features__item reset-feature" id="featureItem-df">
                             <button type="button" id="btn-df"
-                                    onclick="toggleFontFeature()"
                                     class="uwaw-features__item__i"
                                     data-uw-reader-content="Enable the UserWay screen reader"
-                                    aria-label="Enable the UserWay screen reader"
+                                    aria-label="Use dyslexia-friendly font"
                                     aria-pressed="false">
                                 <span class="uwaw-features__item__icon">
                                     <span class="icon icon-dyslexia-font"> </span>
@@ -544,10 +541,9 @@
 
                         <div class="uwaw-features__item reset-feature" id="featureItem-hi">
                             <button type="button" id="btn-s11"
-                                    onclick="toggleImages()"
                                     class="uwaw-features__item__i"
                                     data-uw-reader-content="Enable the UserWay screen reader"
-                                    aria-label="Enable the UserWay screen reader"
+                                    aria-label="Hide images"
                                     aria-pressed="false">
                                 <span class="uwaw-features__item__icon">
                                     <span class="icon icon-hide-images"> </span>
@@ -563,10 +559,9 @@
                         <div class="uwaw-features__item reset-feature"
                              id="featureItem-Cursor">
                             <button type="button" id="btn-cursor"
-                                    onclick="toggleCursorFeature()"
                                     class="uwaw-features__item__i"
                                     data-uw-reader-content="Enable the UserWay screen reader"
-                                    aria-label="Enable the UserWay screen reader"
+                                    aria-label="Use large cursor"
                                     aria-pressed="false">
                                 <span class="uwaw-features__item__icon">
                                     <span class="icon icon-cursor"> </span>
@@ -584,7 +579,7 @@
                             <button type="button" id="dark-btn"
                                     class="uwaw-features__item__i"
                                     data-uw-reader-content="Enable the UserWay screen reader"
-                                    aria-label="Enable the UserWay screen reader"
+                                    aria-label="Switch between light and dark theme"
                                     aria-pressed="false">
                                 <span class="uwaw-features__item__name">
                                     <span class="light_dark_icon">
@@ -617,7 +612,7 @@
                             <button type="button" id="btn-invert"
                                     class="uwaw-features__item__i"
                                     data-uw-reader-content="Enable the UserWay screen reader"
-                                    aria-label="Enable the UserWay screen reader"
+                                    aria-label="Invert page colors"
                                     aria-pressed="false">
                                 <span class="uwaw-features__item__icon">
                                     <span class="icon icon-invert"> </span>
@@ -655,7 +650,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </aside>
     </form>
     <!-- google translate -->
 <!-- Google Translate Code -->
@@ -668,56 +663,7 @@
 <!-- End Google Translate Code -->
 <!-- accessibility -->
 <script src="js/weights.js"></script>
-<!-- font increase -->
-<script>
-
-    (function () {
-        var affectedElements = Array.prototype.slice.call(document.querySelectorAll("body *"));
-
-    // Storing the original size in a data attribute so size can be reset
-        affectedElements.forEach(function (element) {
-            element.dataset.originalFontSize = element.style.fontSize;
-        });
-
-        function changeFontSize(direction) {
-            affectedElements.forEach(function (element) {
-                var currentSize = parseFloat(window.getComputedStyle(element).fontSize);
-                if (!isNaN(currentSize)) {
-                    element.style.fontSize = (currentSize + direction) + "px";
-                }
-            });
-        }
-
-        document.getElementById("btn-increase").addEventListener("click", function () {
-            changeFontSize(1);
-        });
-
-        document.getElementById("btn-decrease").addEventListener("click", function () {
-            changeFontSize(-1);
-        });
-
-        document.getElementById("btn-orig").addEventListener("click", function () {
-            affectedElements.forEach(function (element) {
-                element.style.fontSize = element.dataset.originalFontSize;
-            });
-        });
-    }());
-</script>
-
-<!-- light dark theme -->
-
-<script>
-    const checkbox = document.getElementById("checkbox");
-    const isDarkMode = localStorage.getItem("darkMode") === "true";
-    checkbox.checked = isDarkMode;
-    const toggleDarkMode = () => {
-        const isDarkMode = checkbox.checked;
-        document.body.classList.toggle("dark", isDarkMode);
-        localStorage.setItem("darkMode", isDarkMode);
-    };
-    checkbox.addEventListener("change", toggleDarkMode);
-    toggleDarkMode();
-</script>
+<!-- Accessibility controls are initialized by js/weights.js. -->
 
 </body>
 </html>

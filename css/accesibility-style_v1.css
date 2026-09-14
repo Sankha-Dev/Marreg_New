@@ -762,19 +762,107 @@ body[data-gr-ext-installed]{
 
 
 @media (max-width: 767px) {
-  .uwaw-features {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  }
+    .uwaw-features {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
 
-  .uwaw {
-    max-width: 100%;
-  }
+    .uwaw {
+        max-width: 100%;
+    }
 
-  .second-panel h3 {
-    font-size: 24px;
-  }
+    .second-panel h3 {
+        font-size: 24px;
+    }
 
-  .copyrights-accessibility a span {
-    font-size: 16px;
-  }
+    .copyrights-accessibility a span {
+        font-size: 16px;
+    }
+}
+/* Master-page accessibility controls: composable, reversible, and scoped away from the settings panel. */
+:root {
+    --a11y-font-scale: 0;
+    --a11y-line-height: 0;
+    --a11y-text-spacing: 0;
+}
+
+body > form > div:not(#uw-main) {
+    font-size: calc(1rem + (var(--a11y-font-scale) * 2px));
+    line-height: calc(1.5em + (var(--a11y-line-height) * 0.2em));
+    letter-spacing: calc(var(--a11y-text-spacing) * 0.04em);
+    word-spacing: calc(var(--a11y-text-spacing) * 0.08em);
+}
+
+.a11y-highlight-links body > form a:not(#uw-main a) {
+    color: #003d99 !important;
+    background-color: #fff3a3 !important;
+    text-decoration: underline !important;
+    text-decoration-thickness: 0.15em;
+    text-underline-offset: 0.16em;
+}
+
+.a11y-hide-images body > form img:not(#uw-main img),
+.a11y-hide-images body > form picture:not(#uw-main picture),
+.a11y-hide-images body > form [style*="background-image"]:not(#uw-main *) {
+    visibility: hidden !important;
+}
+
+.a11y-dyslexia body > form :not(#uw-main):not(#uw-main *) {
+    font-family: 'open-dyslexic', Arial, sans-serif !important;
+}
+
+.a11y-large-cursor body, .a11y-large-cursor body * {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='54' viewBox='0 0 40 54'%3E%3Cpath d='M4 2 36 25 22 29 31 47l-9 5-9-18-9 10Z' fill='white' stroke='black' stroke-width='3'/%3E%3C/svg%3E") 4 2, auto !important;
+}
+
+.a11y-inverted body > form > div {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+.a11y-inverted body > form img, .a11y-inverted body > form video {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+body.dark {
+    color: #f8fafc;
+    background: #111827;
+    color-scheme: dark;
+}
+
+    body.dark a:not(#uw-main a) {
+        color: #93c5fd;
+    }
+
+    body.dark .header-top, body.dark .header-white, body.dark footer, body.dark .terms {
+        background-color: #182235 !important;
+        color: #f8fafc !important;
+    }
+
+    body.dark #uw-main, body.dark #uw-main .uwaw-body, body.dark #uw-main .lang, body.dark #uw-main .copyrights-accessibility {
+        color-scheme: light;
+    }
+
+.uwaw {
+    right: 0;
+    transform: translateX(105%);
+    transition: transform .25s ease;
+}
+
+    .uwaw.is-open {
+        transform: translateX(0);
+    }
+
+.uwaw-close {
+    border: 0;
+    background-color: transparent;
+}
+
+.uwaw button:focus-visible, .uw-widget-custom-trigger:focus-visible {
+    outline: 3px solid #fbbf24;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .uwaw {
+        transition: none;
+    }
 }

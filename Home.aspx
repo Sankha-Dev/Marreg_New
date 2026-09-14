@@ -33,7 +33,7 @@
             autoWidth: false,
             autoplay: true,
             autoplayTimeout: 2000,
-            autoplayHoverPause: true,
+            autoplayHoverPause: false,
             nav: true,
             dots: true,
             margin: 0,
