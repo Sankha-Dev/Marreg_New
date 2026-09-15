@@ -51,44 +51,44 @@
             step.className = 'step uwaw-features__step' + (i < level ? ' active' : '');
             container.appendChild(step);
         }
+    }
 
-        function applySettings() {
-            root.style.setProperty('--a11y-font-scale', String(settings.fontScale));
-            root.style.setProperty('--a11y-line-height', String(settings.lineHeight));
-            root.style.setProperty('--a11y-text-spacing', String(settings.textSpacing));
-            root.classList.toggle('a11y-highlight-links', settings.highlightLinks);
-            root.classList.toggle('a11y-dyslexia', settings.dyslexia);
-            root.classList.toggle('a11y-hide-images', settings.hideImages);
-            root.classList.toggle('a11y-large-cursor', settings.cursor);
-            root.classList.toggle('a11y-inverted', settings.inverted);
-            document.body.classList.toggle('dark', settings.theme === 'dark');
+    function applySettings() {
+        root.style.setProperty('--a11y-font-scale', String(settings.fontScale));
+        root.style.setProperty('--a11y-line-height', String(settings.lineHeight));
+        root.style.setProperty('--a11y-text-spacing', String(settings.textSpacing));
+        root.classList.toggle('a11y-highlight-links', settings.highlightLinks);
+        root.classList.toggle('a11y-dyslexia', settings.dyslexia);
+        root.classList.toggle('a11y-hide-images', settings.hideImages);
+        root.classList.toggle('a11y-large-cursor', settings.cursor);
+        root.classList.toggle('a11y-inverted', settings.inverted);
+        document.body.classList.toggle('dark', settings.theme === 'dark');
 
-            var checkbox = document.getElementById('checkbox');
-            if (checkbox) checkbox.checked = settings.theme === 'dark';
+        var checkbox = document.getElementById('checkbox');
+        if (checkbox) checkbox.checked = settings.theme === 'dark';
 
-            levelFeature('featureItem', settings.fontScale, 3);
-            levelFeature('featureItem-st', -settings.fontScale, 3);
-            levelFeature('featureItem-lh', settings.lineHeight, 3);
-            levelFeature('featureItem-ts', settings.textSpacing, 3);
-            feature('featureItem_sp', settings.screenReader);
-            feature('featureItem-ht', settings.highlightLinks);
-            feature('featureItem-df', settings.dyslexia);
-            feature('featureItem-hi', settings.hideImages);
-            feature('featureItem-Cursor', settings.cursor);
-            feature('featureItem-ht-dark', settings.theme === 'dark');
-            feature('featureItem-ic', settings.inverted);
-        }
+        levelFeature('featureItem', settings.fontScale, 3);
+        levelFeature('featureItem-st', -settings.fontScale, 3);
+        levelFeature('featureItem-lh', settings.lineHeight, 3);
+        levelFeature('featureItem-ts', settings.textSpacing, 3);
+        feature('featureItem_sp', settings.screenReader);
+        feature('featureItem-ht', settings.highlightLinks);
+        feature('featureItem-df', settings.dyslexia);
+        feature('featureItem-hi', settings.hideImages);
+        feature('featureItem-Cursor', settings.cursor);
+        feature('featureItem-ht-dark', settings.theme === 'dark');
+        feature('featureItem-ic', settings.inverted);
+    }
 
-        function update(callback) {
-            callback();
-            saveSettings();
-            applySettings();
-        }
+    function update(callback) {
+        callback();
+        saveSettings();
+        applySettings();
+    }
 
-        function speakPage() {
-            if (!('speechSynthesis' in window)) return;
-            window.speechSynthesis.cancel();
-        }
+    function speakPage() {
+        if (!('speechSynthesis' in window)) return;
+        window.speechSynthesis.cancel();
         if (!settings.screenReader) return;
         var main = document.querySelector('main, [role="main"], #ContentPlaceHolder1') || document.body;
         var utterance = new SpeechSynthesisUtterance(main.innerText.replace(/\s+/g, ' ').trim());
