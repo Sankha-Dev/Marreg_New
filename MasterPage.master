@@ -127,16 +127,16 @@
                                 </label>
                             </span> -->
                             <span class="language01">
-                                <div id="langForm" class="d-flex align-items-center">
-                                    <i class="glog-lang">
-                                        <img src="images/glob.svg" alt="glob"/>
-                                    </i>
-                                    <select name="language" id="changeLang" onchange="OnSelectedIndexChange()">
-                                        <option value="" selected="" disable="">Language</option>
-                                        <option value="en">English</option>
-                                    </select>
-                                 </div>
-                            </span>
+                            <form id="langForm" method="POST" class="d-flex align-items-center">
+                                <i class="glog-lang">
+                                  <img src="images/glob.svg" alt="glob">
+                                </i>
+                                <select name="language" id="changeLang" onchange="OnSelectedIndexChange()">
+                                    <option value="" selected="" disable="">Language</option>
+                                    <option value="en">English</option>
+                                </select>
+                            </form>
+                        </span>
                             <a class="skip01" id="uw-widget-custom-trigger" href="#uw-main" style="cursor: pointer;">
                                 <img src="images/accessible.svg" alt="Accessibility"/>
                                 <strong>More</strong>
@@ -582,21 +582,24 @@
                                     aria-label="Switch between light and dark theme"
                                     aria-pressed="false">
                                 <span class="uwaw-features__item__name">
-                                    <span class="light_dark_icon">
-                                        <input type="checkbox"
-                                               class="light_mode uwaw-featugres__item__i"
-                                               id="checkbox" />
-                                        <label for="checkbox" class="checkbox-label">
-                                            <!-- <i class="fas fa-moon-stars"></i> -->
-                                            <i class="fas fa-moon-stars">
-                                                <span class="icon icon-moon"></span>
-                                            </i>
-                                            <i class="fas fa-sun">
-                                                <span class="icon icon-sun"></span>
-                                            </i>
-                                            <span class="ball"></span>
-                                        </label>
-                                    </span>
+                                    <span class="uwaw-features__item__name">
+            <span class="light_dark_icon">
+              <input
+                type="checkbox"
+                class="light_mode uwaw-featugres__item__i"
+                id="checkbox"
+              />
+              <label for="checkbox" class="checkbox-label">
+                <!-- <i class="fas fa-moon-stars"></i> -->
+                <i class="fas fa-moon-stars">
+                  <span class="icon icon-moon"></span>
+                </i>
+                <i class="fas fa-sun">
+                  <span class="icon icon-sun"></span>
+                </i>
+                <span class="ball"></span>
+              </label>
+            </span>
                                     <span class="uwaw-features__item__name">Light-Dark</span>
                                 </span>
                                 <span class="tick-active uwaw-features__item__enabled reset-tick"

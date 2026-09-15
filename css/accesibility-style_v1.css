@@ -785,7 +785,13 @@ body[data-gr-ext-installed]{
     --a11y-text-spacing: 0;
 }
 
-body > form > div:not(#uw-main) {
+body > form > div:not(#uw-main),
+body > header,
+body > main,
+body > section,
+body > footer {
+    /* Zoom also scales text with fixed px sizes used throughout the legacy templates. */
+    zoom: calc(1 + (var(--a11y-font-scale) * 0.1));
     font-size: calc(1rem + (var(--a11y-font-scale) * 2px));
     line-height: calc(1.5em + (var(--a11y-line-height) * 0.2em));
     letter-spacing: calc(var(--a11y-text-spacing) * 0.04em);

@@ -66,6 +66,7 @@
 
         var checkbox = document.getElementById('checkbox');
         if (checkbox) checkbox.checked = settings.theme === 'dark';
+        updateTextControls();
 
         levelFeature('featureItem', settings.fontScale, 3);
         levelFeature('featureItem-st', -settings.fontScale, 3);
@@ -86,6 +87,17 @@
         applySettings();
     }
 
+    function updateTextControls() {
+        var resetButton = document.getElementById('btn-orig');
+        if (resetButton) resetButton.classList.toggle('active01', settings.fontScale === 0);
+    }
+
+    function changeFontSize(amount) {
+        update(function () {
+            settings.fontScale = Math.max(-3, Math.min(3, settings.fontScale + amount));
+        });
+    }
+
     function speakPage() {
         if (!('speechSynthesis' in window)) return;
         window.speechSynthesis.cancel();
@@ -100,8 +112,11 @@
         if (button) button.addEventListener('click', callback);
     }
 
-    bind('btn-s9', function () { update(function () { settings.fontScale = settings.fontScale >= 3 ? 0 : settings.fontScale + 1; }); });
-    bind('btn-small-text', function () { update(function () { settings.fontScale = settings.fontScale <= -3 ? 0 : settings.fontScale - 1; }); });
+    bind('btn-s9', function () { changeFontSize(1); });
+    bind('btn-small-text', function () { changeFontSize(-1); });
+    bind('btn-increase', function () { changeFontSize(1); });
+    bind('btn-decrease', function () { changeFontSize(-1); });
+    bind('btn-orig', function () { update(function () { settings.fontScale = defaults.fontScale; }); });
     bind('btn-s12', function () { update(function () { settings.lineHeight = settings.lineHeight >= 3 ? 0 : settings.lineHeight + 1; }); });
     bind('btn-s13', function () { update(function () { settings.textSpacing = settings.textSpacing >= 3 ? 0 : settings.textSpacing + 1; }); });
     bind('btn-s10', function () { update(function () { settings.highlightLinks = !settings.highlightLinks; }); });
