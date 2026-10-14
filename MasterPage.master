@@ -7,12 +7,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MARREG</title>
-    <link rel="stylesheet" href="css/fontawesome.min.css" />
-    <link href="css/ux4g-v1.0.1.css" rel="stylesheet" />
-    <link href="css/html-template-1.css" rel="stylesheet" />
-    <link href="css/accesibility-style_v1.css" rel="stylesheet" />
+    <link rel="~/stylesheet" href="css/fontawesome.min.css" />
+    <link href="~/css/ux4g-v1.0.1.css" rel="stylesheet" />
+    <link href="~/css/html-template-1.css" rel="stylesheet" />
+    <link href="~/css/accesibility-style_v1.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://img1.digitallocker.gov.in/nad/v-22/assets/css/fontawesome.min.css" />
-    <link rel="stylesheet" href="css/stylesheet.css" />
+    <link rel="stylesheet" href="~/css/stylesheet.css" />
     <style>
         .accessibility.banner {
             background-color: #e8f5e9;
@@ -211,7 +211,7 @@
                                 <span class="language01">
                                     <form id="langForm" method="POST" class="d-flex align-items-center">
                                         <i class="glog-lang">
-                                            <img src="images/glob.svg" alt="glob">
+                                            <img src="../images/glob.svg" alt="glob">
                                         </i>
                                         <select name="language" id="changeLang" onchange="OnSelectedIndexChange()">
                                             <option value="" selected="" disable="">Language</option>
@@ -220,7 +220,7 @@
                                     </form>
                                 </span>
                                 <a class="skip01" id="uw-widget-custom-trigger" href="#uw-main" style="cursor: pointer;">
-                                    <img src="images/accessible.svg" alt="Accessibility" />
+                                    <img src="../images/accessible.svg" alt="Accessibility" />
                                     <strong>More</strong>
                                 </a>
                             </div>
@@ -233,7 +233,7 @@
                         <nav class="navbar navbar-expand-lg bg-body-tertiary">
                             <div class="container-fluid pr-0 pl-0">
                                 <a class="navbar-brand" href="#">
-                                    <img src="images/logo_golden.svg" alt="logo" loading="lazy">
+                                    <img src="../images/logo_golden.svg" alt="logo" loading="lazy">
                                     <!--<img src="images/emblem.png" height="40" width="24" alt="logo" loading="lazy">-->
                                 </a>
                                 <a class="nav-link active" aria-current="page" href="#">Registrar General of Marriages</a>
@@ -363,7 +363,7 @@
                                     </ul>
                                     <button type="button" class="btn btn-primary">Login</button>
                                     <div class="search pl-30">
-                                        <img src="images/marreg_new_logo_40.png" alt="logo" height="40" width="40">
+                                        <img src="../images/marreg_new_logo_40.png" alt="logo" height="40" width="40"/>
                                     </div>
                                 </div>
                             </div>
@@ -728,10 +728,10 @@
             new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
         }
     </script>
-    <script type="text/javascript" src="js/google-translate.js"></script>
+    <script type="text/javascript" src="../js/google-translate.js"></script>
     <!-- End Google Translate Code -->
     <!-- accessibility -->
-    <script src="js/weights.js"></script>
+    <script src="../js/weights.js"></script>
     <!-- Accessibility controls are initialized by js/weights.js. -->
 
 </body>

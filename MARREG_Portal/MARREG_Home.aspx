@@ -1,10 +1,10 @@
-﻿<%@ Page Title="Home" Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="Home.aspx.vb" Inherits="Home" %>
+﻿<%@ Page Title="Home" Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="~/MARREG_Portal/MARREG_Home.aspx.vb" Inherits="Home" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <link rel="stylesheet" href="css/owl-carousel.css" />
-    <script src="js/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="../css/owl-carousel.css" />
+    <script src="../js/owl.carousel.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var readMoreButton = document.getElementById("aboutReadMore");
@@ -66,7 +66,7 @@
                         <div class="col-sm-6 col-12">
                             <div class="accessibility-banner-content">
                                 <div class="text-center d-block d-md-none">
-                                    <img src="images/slideshow/Pic1.jpg" alt="Responsive" loading="lazy" style="height: 200px;" />
+                                    <img src="../images/slideshow/Pic1.jpg" alt="Responsive" loading="lazy" style="height: 200px;" />
                                 </div>
                                 <h1><span>The Hindu Marriage Act, 1955</span></h1>
                                 <p>
@@ -78,7 +78,7 @@
                         </div>
                         <div class="col-sm-6 col-12 text-end d-none d-sm-block">
                             <div class="text-end">
-                                <img src="images/slideshow/Pic1.jpg" alt="Responsive" loading="lazy" style="height: 350px;" />
+                                <img src="../images/slideshow/Pic1.jpg" alt="Responsive" loading="lazy" style="height: 350px;" />
                             </div>
                         </div>
 
@@ -91,7 +91,7 @@
                         <div class="col-sm-6 col-12">
                             <div class="accessibility-banner-content">
                                 <div class="text-center d-block d-md-none">
-                                    <img src="images/slideshow/Pic2.jpg" alt="Responsive" loading="lazy" style="height: 200px;" />
+                                    <img src="../images/slideshow/Pic2.jpg" alt="Responsive" loading="lazy" style="height: 200px;" />
                                 </div>
                                 <h1><span style="color: #30b5b2;">The Special Marriage Act, 1954 (Under Section 13)</span></h1>
                                 <p><strong>Under This Act Of Marriage,Declaration/Solemnisation Process Should Start After 30 Days From The Date Of Receipt Of Notice Date And End Within 3 Months Of This Notice Period.</strong></p>
@@ -99,7 +99,7 @@
                         </div>
                         <div class="col-sm-6 col-12 d-none d-sm-block">
                             <div class="text-end">
-                                <img src="images/slideshow/Pic2.jpg" alt="Responsive" loading="lazy" style="height: 350px;" />
+                                <img src="../images/slideshow/Pic2.jpg" alt="Responsive" loading="lazy" style="height: 350px;" />
                             </div>
                         </div>
 
@@ -112,7 +112,7 @@
                         <div class="col-sm-6 col-12">
                             <div class="accessibility-banner-content">
                                 <div class="text-center d-block d-md-none">
-                                    <img src="images/slideshow/Pic3.jpg" alt="Responsive" loading="lazy" style="height: 200px;">
+                                    <img src="../images/slideshow/Pic3.jpg" alt="Responsive" loading="lazy" style="height: 200px;">
                                 </div>
                                 <h1><span style="color: #075705;">The Special Marriage Act, 1954 (Under Section 16)</span></h1>
                                 <p><strong>Under This Act Of Marriage, Application Can Be Submitted To Marriage Officer At Least After 30days From The Date Of Marriage. Objection Period 30days From The Date Of Received Application. Marriage Should Be Registered Within 6 Calendar Months From The Date Of Received Application.</strong></p>
@@ -120,7 +120,7 @@
                         </div>
                         <div class="col-sm-6 col-12 d-none d-sm-block">
                             <div class="text-end">
-                                <img src="images/slideshow/Pic3.jpg" alt="Responsive" loading="lazy" style="height: 350px;" />
+                                <img src="../images/slideshow/Pic3.jpg" alt="Responsive" loading="lazy" style="height: 350px;" />
                             </div>
                         </div>
 
@@ -133,7 +133,7 @@
                         <div class="col-sm-6 col-12">
                             <div class="accessibility-banner-content">
                                 <div class="text-center d-block d-md-none">
-                                    <img src="images/slideshow/Pic4.jpg" alt="Responsive" loading="lazy" style="height: 200px;" />
+                                    <img src="../images/slideshow/Pic4.jpg" alt="Responsive" loading="lazy" style="height: 200px;" />
                                 </div>
                                 <h1><span style="color: #075705;">The Indian Christian Marriage Act, 1872</span></h1>
                                 <p><strong>Under This Act Of Marriage, Both The Bride And The Groom Should Be More Than 21 Years Of Age. In Case Age Of Bride Is Below 21 Years But Above 18 Years In Such Cases, A Letter Of Consent Is Required From The Guardian/Parent.</strong></p>
@@ -141,7 +141,7 @@
                         </div>
                         <div class="col-sm-6 col-12 d-none d-sm-block">
                             <div class="text-end">
-                                <img src="images/slideshow/Pic4.jpg" alt="Responsive" loading="lazy" style="height: 350px;" />
+                                <img src="../images/slideshow/Pic4.jpg" alt="Responsive" loading="lazy" style="height: 350px;" />
                             </div>
                         </div>
 
@@ -154,7 +154,7 @@
                         <div class="col-sm-6 col-12">
                             <div class="accessibility-banner-content">
                                 <div class="text-center d-block d-md-none">
-                                    <img src="images/slideshow/Pic5.jpg" alt="Responsive" loading="lazy" style="height: 200px;">
+                                    <img src="../images/slideshow/Pic5.jpg" alt="Responsive" loading="lazy" style="height: 200px;">
                                 </div>
                                 <h1><span style="color: #075705;">The Parsi Marriage & Divorce Act, 1936</span></h1>
                                 <p><strong>A Parsi Marriage Is Solemnised According To The Parsi Form Of Ceremony Called "Ashirvad" By A Priest In The Presence Of Two Parsi Witnesses Other Than Such Priest Or In The Case Of Any Parsi (Whether Such Parsi Has Changed His Or Her Religion Or Domicile Or Not).</strong></p>
@@ -162,7 +162,7 @@
                         </div>
                         <div class="col-sm-6 col-12 d-none d-sm-block">
                             <div class="text-end">
-                                <img src="images/slideshow/Pic5.jpg" alt="Responsive" loading="lazy" style="height: 350px;" />
+                                <img src="../images/slideshow/Pic5.jpg" alt="Responsive" loading="lazy" style="height: 350px;" />
                             </div>
                         </div>
 
@@ -182,7 +182,7 @@
         <div class="container">
             <div class="latest-news-content d-flex align-items-center justify-content-between">
                 <h5 class="d-flex gap-2">
-                    <img src="images/star.svg" alt="star" />
+                    <img src="../images/star.svg" alt="star" />
                     LATEST</h5>
                 <marquee behavior="" direction="">
                     <span style="font-size: 15px; vertical-align: central; color: red; margin-bottom: 5px; text-transform: uppercase"><< ALL MARRIAGE REGISTRARS who have been allowed by RGM to Register Marriages online should immediately start using the Portal >> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  << <span style="color: blue"><b>Important Document </b></span>>> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -199,28 +199,28 @@
             <div class="row">
                 <div class="col-12 col-sm-3">
                     <div class="counter_box text-center">
-                        <!--<img src="images/23x32.png" alt="icon">-->
+                        <!--<img src="../images/23x32.png" alt="icon">-->
                         <h1>00000</h1>
                         <p><b>Certificates Generated from 1st January of Current Year</b></p>
                     </div>
                 </div>
                 <div class="col-12 col-sm-3">
                     <div class="counter_box text-center">
-                        <!--<img src="images/23x32.png" alt="icon">-->
+                        <!--<img src="../images/23x32.png" alt="icon">-->
                         <h1>00000</h1>
                         <p><b>Certificates Generated from 1st of Current Month</b> </p>
                     </div>
                 </div>
                 <div class="col-12 col-sm-3">
                     <div class="counter_box text-center">
-                        <!--<img src="images/23x32.png" alt="icon">-->
+                        <!--<img src="../images/23x32.png" alt="icon">-->
                         <h1>00000</h1>
                         <p><b>Online MO</b></p>
                     </div>
                 </div>
                 <div class="col-12 col-sm-3">
                     <div class="counter_box text-center">
-                        <!--<img src="images/23x32.png" alt="icon">-->
+                        <!--<img src="../images/23x32.png" alt="icon">-->
                         <h1>00000</h1>
                         <p><b>Visitors Count</b></p>
                     </div>
@@ -228,7 +228,7 @@
 
             </div>
             <div class="transparent-line text-center">
-                <img src="images/line.svg" alt="line">
+                <img src="../images/line.svg" alt="line">
             </div>
         </div>
     </section>
@@ -288,7 +288,7 @@
 
                 <div class="col-sm-6">
                     <div class="position-relative about-c-img">
-                        <img src="images/rgm_wb.png" loading="lazy">
+                        <img src="../images/rgm_wb.png" loading="lazy">
                         <%--    <img src="images/so_rgm_wb_218x218.png"
                                      loading="lazy"
                                      class="about-img2">
@@ -317,18 +317,18 @@
                 <div class="row">
                     <div class="col-sm-5">
                         <div class="card-modi-ji">
-                            <img src="images/cm_wb_282x282.png" alt="modi ji">
+                            <img src="../images/cm_wb_282x282.png" alt="modi ji">
                             <p>Hon’ble Chief Minister</p>
                             <h3>Shri Suvendu Adhikari</h3>
                             <div class="pmg-social d-flex gap-2 align-items-center justify-content-center mt-20">
                                 <a href="">
-                                    <img src="images/linkedin.svg" alt="linkedin"></a>
+                                    <img src="../images/linkedin.svg" alt="linkedin"></a>
                                 <a href="">
-                                    <img src="images/facebook2.svg" alt="facebook"></a>
+                                    <img src="../images/facebook2.svg" alt="facebook"></a>
                                 <a href="">
-                                    <img src="images/instagram.svg" alt="instagram"></a>
+                                    <img src="../images/instagram.svg" alt="instagram"></a>
                                 <a href="">
-                                    <img src="images/twitter2.svg" alt="linkedin"></a>
+                                    <img src="../images/twitter2.svg" alt="linkedin"></a>
                             </div>
                         </div>
                     </div>
@@ -336,7 +336,7 @@
                         <div class="pmg-team">
 
                             <div class="pmg-team-content d-flex gap-3 align-items-center">
-                                <img src="images/mos_wb_218x218.png" alt="name">
+                                <img src="../images/mos_wb_218x218.png" alt="name">
                                 <div class="pmg-team-title ashwini-ji">
                                     <p>Hon'ble Minister of State, Law Department</p>
                                     <h3>Shri Biraj Biswas</h3>
@@ -344,7 +344,7 @@
                             </div>
 
                             <div class="pmg-team-content d-flex flex-column align-items-center">
-                                <img src="images/ps_wb_120x120.png" alt="name">
+                                <img src="../images/ps_wb_120x120.png" alt="name">
                                 <div class="pmg-team-title minister-ji text-center">
                                     <p>Principal Secretary, Law Department</p>
                                     <h3>Shri Subhradip Mitra</h3>
@@ -393,7 +393,7 @@
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="service-card">
-                                <img src="images/icons/apply_online.svg" alt="icon" loading="lazy">
+                                <img src="../images/icons/apply_online.svg" alt="icon" loading="lazy">
                                 <h3>Apply Online</h3>
                                 <!--<p>Sub-Heading</p>-->
                             </div>
@@ -407,21 +407,21 @@
                             </div>-->
                         <div class="col-sm-3">
                             <div class="service-card">
-                                <img src="images/icons/transfers.svg" alt="icon" loading="lazy">
+                                <img src="../images/icons/transfers.svg" alt="icon" loading="lazy">
                                 <h3>Transfer</h3>
                                 <!--<p>Sub-Heading-2</p>-->
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="service-card">
-                                <img src="images/icons/cc_badge.svg" alt="icon" loading="lazy">
+                                <img src="../images/icons/cc_badge.svg" alt="icon" loading="lazy">
                                 <h3>Certified Copy of Marriage Records</h3>
                                 <!--<p>Sub-Heading-3</p>-->
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="service-card">
-                                <img src="images/icons/search.svg" alt="icon" loading="lazy">
+                                <img src="../images/icons/search.svg" alt="icon" loading="lazy">
                                 <h3>Search Marriage Records</h3>
                                 <!--<p>Sub-Heading-4</p>-->
                             </div>
@@ -433,28 +433,28 @@
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="service-card">
-                                <img src="images/icons/objections.svg" alt="icon" loading="lazy">
+                                <img src="../images/icons/objections.svg" alt="icon" loading="lazy">
                                 <h3>Objection</h3>
                                 <!--<p>Sub-Heading-4</p>-->
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="service-card">
-                                <img src="images/icons/faq.svg" alt="icon" loading="lazy">
+                                <img src="../images/icons/faq.svg" alt="icon" loading="lazy">
                                 <h3>FAQ</h3>
                                 <!--<p>Sub-Heading-4</p>-->
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="service-card">
-                                <img src="images/icons/circulars.svg" alt="icon" loading="lazy">
+                                <img src="../images/icons/circulars.svg" alt="icon" loading="lazy">
                                 <h3>Circulars</h3>
                                 <!--<p>Sub-Heading-4</p>-->
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="service-card">
-                                <img src="images/icons/sitemap.svg" alt="icon" loading="lazy">
+                                <img src="../images/icons/sitemap.svg" alt="icon" loading="lazy">
                                 <h3>Sitemap</h3>
                                 <!--<p>Sub-Heading-4</p>-->
                             </div>
@@ -522,21 +522,21 @@
                                     <div class="carousel-item active">
                                         <div class="row mb-20">
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                         </div>
                                     </div>
@@ -544,21 +544,21 @@
 
                                         <div class="row mb-20">
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                         </div>
                                     </div>
@@ -566,21 +566,21 @@
 
                                         <div class="row mb-20">
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                         </div>
                                     </div>
@@ -606,42 +606,42 @@
                                     <div class="carousel-item active">
                                         <div class="row mb-20">
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="row mb-20">
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                         </div>
 
@@ -650,21 +650,21 @@
 
                                         <div class="row mb-20">
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                         </div>
                                     </div>
@@ -709,42 +709,42 @@
                                     <div class="carousel-item active">
                                         <div class="row mb-20">
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="row mb-20">
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                         </div>
 
@@ -753,21 +753,21 @@
 
                                         <div class="row mb-20">
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                         </div>
                                     </div>
@@ -793,21 +793,21 @@
                                     <div class="carousel-item active">
                                         <div class="row mb-20">
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                         </div>
                                     </div>
@@ -815,21 +815,21 @@
 
                                         <div class="row mb-20">
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                         </div>
                                     </div>
@@ -837,21 +837,21 @@
 
                                         <div class="row mb-20">
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/618x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                             <div class="col-sm-6">
-                                                <img class="w-100" src="images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
+                                                <img class="w-100" src="../images/558x332.png" alt="img" loading="lazy" style="height: 332px;">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                             <div class="col-sm-4">
-                                                <img class="w-100" src="images/386x332.png" alt="img" loading="lazy">
+                                                <img class="w-100" src="../images/386x332.png" alt="img" loading="lazy">
                                             </div>
                                         </div>
                                     </div>
