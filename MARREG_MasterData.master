@@ -1,0 +1,302 @@
+﻿<%@ Master Language="VB" CodeFile="MARREG_MasterData.master.vb" Inherits="MARREG_MasterData"%>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="shortcut icon"  href="MARREG_Images/Portal/marreg_title_logo.png"/>
+     <script type="text/javascript">
+         var rev = "fwd";
+         function titlebar(val) {
+             var msg = "MARREG MARriage REGistration GoWB";
+             var res = " ";
+             var speed = 300;
+             var pos = val;
+             msg = "" + msg + "";
+             var le = msg.length;
+             if (rev == "fwd") {
+                 if (pos < le) {
+                     pos = pos + 1;
+                     scroll = msg.substr(0, pos);
+                     document.title = scroll;
+                     timer = window.setTimeout("titlebar(" + pos + ")", speed);
+                 }
+                 else {
+                     rev = "bwd";
+                     timer = window.setTimeout("titlebar(" + pos + ")", speed);
+                 }
+             }
+             else {
+                 if (pos > 0) {
+                     pos = pos - 1;
+                     var ale = le - pos;
+                     scrol = msg.substr(ale, le);
+                     document.title = scrol;
+                     timer = window.setTimeout("titlebar(" + pos + ")", speed);
+                 }
+                 else {
+                     rev = "fwd";
+                     timer = window.setTimeout("titlebar(" + pos + ")", speed);
+                 }
+             }
+         }
+         ///titlebar(0);
+     </script>
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="MARREG_StyleSheets/Global.css" />
+    <link type="text/css" rel="stylesheet" href="MARREG_StyleSheets/MasterData.css" />
+    <link type="text/css" rel="stylesheet" href="MARREG_StyleSheets/Grid.css" />
+    <link type="text/css" rel="stylesheet" href="MARREG_StyleSheets/Popupstyle.css" />
+    <script type="text/javascript" src="../MARREG_Scripts/MasterData.js"></script>
+    <script type="text/javascript" src="../MARREG_Scripts/AppOn.js"></script>
+    <script type="text/javascript" src="../bootstrap/js/libs/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap/toast/toastr.css" />
+<script type="text/javascript" src="../bootstrap/toast/toastr.js"></script>
+<script type="text/javascript">
+    function showpop6(msg, title) {
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": true,
+            "positionClass": "toast-bottom-left",
+            "preventDuplicates": true,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "6000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+        // toastr['success'](msg, title);
+        var d = Date();
+        toastr.error(msg, title);
+        return false;
+    }
+    function showpop5(msg, title) {
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": true,
+            "positionClass": "toast-bottom-left",
+            "preventDuplicates": true,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "6000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+        // toastr['success'](msg, title);
+        var d = Date();
+        toastr.success(msg, title);
+        return false;
+    }
+</script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        var clicked = false;
+        function bodyUnload() {
+
+            if (clicked == false) {
+               
+                var request = GetRequest();
+                //21.01.16
+                //request.open("GET", "../MARREG_Admin/Default.aspx", true);
+                request.open("POST", "../MARREG_Login/MARREG_Logout.aspx", true);
+                //end 21.01.16
+               request.send();
+            }
+        }
+        function GetRequest() {
+            var request = null;
+            if (window.XMLHttpRequest) {
+                //incase of IE7,FF, Opera and Safari browser
+                request = new XMLHttpRequest();
+                //alert("p");
+            }
+            else {
+                //for old browser like IE 6.x and IE 5.x
+                request = new ActiveXObject('MSXML2.XMLHTTP.3.0');
+               // alert("p1");
+            }
+            return request;
+        }
+        //function GetRequest() {
+        //    var xmlHttp = null;
+        //    try {
+        //        // Firefox, Opera 8.0+, Safari
+        //        xmlHttp = new XMLHttpRequest();
+        //    }
+        //    catch (e) {
+        //        //Internet Explorer
+        //        try {
+        //            xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+        //        }
+        //        catch (e) {
+        //            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        //        }
+        //    }
+        //    return xmlHttp;
+        //}
+     
+        $(document).ready(function ()
+        {
+            $('input[type="text"]').bind('copy paste cut', function (e) { e.preventDefault(); });
+            //$('input[type="password"]').bind('copy paste cut', function (e) { e.preventDefault(); });
+            $('textarea').bind('copy paste cut', function (e) { e.preventDefault(); });
+
+            $(document).bind("contextmenu", function (e)
+            {
+                //warning prompt - optional
+                alert("Right-click is not allowed!");
+
+                //delete the default context menu
+                return false;
+            });
+        });
+        window.history.forward(1);
+        document.attachEvent("onkeydown", my_onkeydown_handler);
+        function my_onkeydown_handler() {
+            switch (event.keyCode) {
+                case 116: // F5;
+
+                    event.returnValue = false;
+                    event.keyCode = 0;
+                    //window.status = "We have disabled F5";
+                    break;
+                case 123:
+                    event.returnValue = false;
+                    event.keyCode = 0;
+                    //window.status = "We have disabled F12";
+                    break;
+            }
+        }
+    </script>
+    <style>
+        .zoom {
+            transition: transform .2s;
+            margin: 0 auto;
+        }
+
+            .zoom:hover {
+                -ms-transform: scale(2); /* IE 9 */
+                -webkit-transform: scale(2); /* Safari 3-8 */
+                transform: scale(2);
+            }
+
+    </style>
+</head>
+<body style="background-color:#F7F7E9" onbeforeunload="bodyUnload();" onclick ="clicked=true;">
+    <form id="form1" runat="server" autocomplete ="off" enctype="multipart/form-data">
+        <asp:ScriptManager EnablePartialRendering="true" runat="server"></asp:ScriptManager>
+        <div class="main" style="padding:20px 0 20px 0;">
+            <table class="sub">
+                <tr>
+                    <td style="background:url(../MARREG_Images/MasterData/tlb.jpg);width:10px" rowspan="3"></td>
+                    <td style="background:url(../MARREG_Images/MasterData/tb.jpg);width:967px;height:7px" colspan="2"></td>
+                    <td style="background:url(../MARREG_Images/MasterData/trb.jpg);width:7px" rowspan="3"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table style="width:967px">
+                            <tr>
+                                <td style="background:url(../MARREG_Images/MasterData/head.jpg);width:788px" rowspan="2"></td>
+                                <td style="background:url(../MARREG_Images/MasterData/shead.jpg);width:179px;height:64px"></td>
+                            </tr>
+                            <tr>
+                                <td style="background:url(../MARREG_Images/MasterData/sheadb.jpg);height:18px"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background:url(../MARREG_Images/MasterData/headb.jpg);height:53px"></td>
+                    <td style="background:url(../MARREG_Images/MasterData/headerb.jpg);width:681px">
+
+                    <%-- change 07/02/2019--%>
+                     <asp:Image ID="mo_image_Url"  runat="server" class="zoom"  style="width:40px;height:45px;right:293px" Visible="false"/>
+                     <asp:Label ID="lbl_moname" runat="server" Font-Bold="True" Font-Size="13px" style="padding: 0px 0px 0px 238px; width:271px;float:left"  ForeColor="lightgreen"><%= Session("name") %></asp:Label>
+                        
+                        <div id="loginout">
+                            <asp:ImageButton ID="btn_logout_master" runat="server" ImageUrl="~/MARREG_Images/MasterData/nlogout.png" AlternateText="Logout" onmouseover="this.src='../MARREG_Images/MasterData/hlogout.png';" onmouseout="this.src='../MARREG_Images/MasterData/nlogout.png';"/>
+                            <asp:ImageButton ID="btn_login_master" runat="server" ImageUrl="~/MARREG_Images/MasterData/nlogin.png" AlternateText="Login" onmouseover="this.src='../MARREG_Images/MasterData/hlogin.png';" onmouseout="this.src='../MARREG_Images/MasterData/nlogin.png';" />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <table class="sub">
+                <tr>
+                    <td style="background:url(../MARREG_Images/MasterData/contentlb.jpg);width:10px" rowspan="2"></td>
+                    <td style="background:url(../MARREG_Images/MasterData/scontent.jpg);width:224px;vertical-align:top" rowspan="2">
+                        <div id="home">
+                            <asp:ImageButton ID="btn_home" runat="server" ImageUrl="~/MARREG_Images/MasterData/nhome.png" AlternateText="Home" onmouseover="this.src='../MARREG_Images/MasterData/hhome.png';" onmouseout="this.src='../MARREG_Images/MasterData/nhome.png';"/>
+                        </div>
+                        <div style="padding-top :10px;height:500px;overflow:auto;vertical-align:top">
+                            <asp:TreeView ID="menu_TreeView" runat="server" Font-Size="12px" ShowLines="true" ForeColor="#400000" NodeStyle-Height="5px">
+                                <HoverNodeStyle BackColor="#404040" ForeColor="White"/>
+                                <SelectedNodeStyle BackColor="Indigo" ForeColor="White" Font-Bold="True"/>
+                            </asp:TreeView>
+                        </div>
+                    </td>
+                    <td style="background:url(../MARREG_Images/MasterData/contentlsh.jpg);width:62px;height:40px"></td>
+                    <td style="background:url(../MARREG_Images/MasterData/contenth.jpg);width:621px;text-align:center;vertical-align:top">
+                        <div style="padding-top:5px">
+                            <asp:Label ID="lbl_head" runat="server" Font-Bold="True" Font-Size="14px" ForeColor="OrangeRed"></asp:Label>
+                    </td>
+                    <td style="background:url(../MARREG_Images/MasterData/contentrsh.jpg);width:59px"></td>
+                    <td style="background:url(../MARREG_Images/MasterData/contentrb.jpg);width:8px" rowspan="2"></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <table style="width:742px">
+                            <tr>
+                                <td style="background:url(../MARREG_Images/MasterData/contentilb.jpg);width:9px;height:501px"></td>
+                                <td id="content">
+                                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </td>
+                                <td style="background:url(../MARREG_Images/MasterData/contentirb.jpg);width:6px"></td>
+                            </tr>
+                        </table>
+                        <table style="width:742px">
+                            <tr>
+                                <td style="background:url(../MARREG_Images/MasterData/contentblc.jpg);width:35px" rowspan="2"></td>
+                                <td style="background:#c7cfdc;width:676px;height:21px"></td>
+                                <td style="background:url(../MARREG_Images/MasterData/contentbrc.jpg);width:31px;height:29px" rowspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td style="background:url(../MARREG_Images/MasterData/contentbb.jpg);height:8px"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <table class="sub">
+                <tr>
+                    <td style="background:url(../MARREG_Images/MasterData/footerlb.jpg);width:10px;height:48px" rowspan="2"></td>
+                    <td style="background:url(../MARREG_Images/MasterData/footer.png);width:716px;height:41px"></td>
+                    <td style="background-color:#3e4450;width:250px">
+                        <embed src="../MARREG_Images/MasterData/fflash.swf" height="38" width="250"/>
+                    </td>
+                    <td style="background:url(../MARREG_Images/MasterData/footerrb.jpg);width:8px" rowspan="2"></td>
+                </tr>
+                <tr>
+                    <td style="background:url(../MARREG_Images/MasterData/footerbb.jpg);height:8px" colspan="2"></td>
+                </tr>
+                <tr>
+                    <td style="background:url(../MARREG_Images/MasterData/spacer.gif);height:1px" colspan="4"></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

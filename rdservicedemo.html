@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://secugenindia.in/webapi/rdservicedemo.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<script type="text/javascript" src="chrome-extension://fnnegphlobjdpkhecapkijjdkgcjhkib/inject-script.js" id="one-x-extension" data-extension-id="fnnegphlobjdpkhecapkijjdkgcjhkib"></script></head>
+<body>	
+	<center>
+		<h1>
+		<b>REGISTRED DEVICE DEMO  </b>
+		</h1>
+	</center>
+
+	<center>
+	<br> <center> <button type="button" onclick="Info()"> RDSERVICE INFO </button> </center> <br>
+
+	<br> <center> <button type="button" onclick="Capture()"> FP CAPTURE </button> </center> <br>
+
+	<br> <center> <button type="button" onclick="DriverInfo()"> DRIVER INFO </button> </center> <br>
+
+	</center>
+
+<script>
+	var params = "";
+	function Info()
+
+	{
+		// var	uri 	= "http://localhost:8010/rd/RDSERVICE/";
+		var	uri 	= "https://localhost:11100/";
+		var	xmlhttp = new XMLHttpRequest();
+
+		xmlhttp.onreadystatechange=function()
+
+		{
+
+			if (xmlhttp.readyState==4 && xmlhttp.status==200)
+
+		        {
+				SucessInfo( xmlhttp.responseText);
+			}
+			else if ( xmlhttp.status == 404 )
+
+			{
+				alert(xmlhttp.status);
+				failCall(xmlhttp.status)
+
+			}
+			else if ( xmlhttp.status == 503 )
+
+			{
+				alert(xmlhttp.status);
+				failCall(xmlhttp.status)
+
+			}
+		}
+
+		xmlhttp.onerror=function()
+
+		{
+
+			alert(xmlhttp.status);
+			failCall(xmlhttp.status);
+
+		}
+
+		xmlhttp.onabort=function()
+
+		{
+
+			alert("Aborted");
+
+		}
+
+		xmlhttp.open("RDSERVICE", uri, true);
+
+		xmlhttp.send();
+
+
+	}   
+	function Capture( ) 
+       	{
+		// var	uri 	= "http://localhost:8010/rd/CAPTURE/";
+		var	uri 	= "https://localhost:11100/rd/capture";
+		// params  += "&PidXML=" + encodeURIComponent(enc_pid_b64);
+
+		params = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><PidOptions ver="1.0"><Opts fCount="1" fType="0" iCount="0" iType="" pCount="0" pType="" format="0" pidVer="2.0" timeout="10000" otp="" env="PP" wadh="rhVuL7SnJi2W2UmsyukVqY7c93JWyL9O/kVKgdNMfv8=" posh="LEFT_THUMB"/><CustOpts><Param name="ValidationKey" value=""/></CustOpts></PidOptions>';
+		// params = '<PidOptions ver="1.0"> <Opts fCount="1"  format="0" pidVer="2.0" timeout="20000" env="P" posh="LEFT_INDEX" />';
+		 // params += '</PidOptions>';
+		var	xmlhttp = new XMLHttpRequest();
+
+		xmlhttp.onreadystatechange=function()
+
+		{
+
+			if (xmlhttp.readyState==4 && xmlhttp.status==200)
+
+		        {
+
+				SucessInfo( xmlhttp.responseText);
+			}
+
+			else if ( xmlhttp.status == 404 )
+
+			{
+
+				failCall(xmlhttp.status)
+
+			}
+
+			else if ( xmlhttp.status == 503 )
+
+			{
+				alert("server Unavailable");
+			}
+		}
+
+		xmlhttp.onerror=function()
+
+		{
+
+			failCall(xmlhttp.status);
+
+		}
+
+		xmlhttp.onabort=function()
+
+		{
+
+			alert("Aborted");
+
+		}
+
+		xmlhttp.open("CAPTURE", uri, true );
+
+		//xmlhttp.send(encodeURIComponent(params));
+
+		xmlhttp.send(params);
+
+	}
+	function DriverInfo( ) 
+       	{
+		var	uri 	= "http://localhost:11100/rd/info";
+		var	xmlhttp = new XMLHttpRequest();
+
+		xmlhttp.onreadystatechange=function()
+
+		{
+
+			if (xmlhttp.readyState==4 && xmlhttp.status==200)
+
+		        {
+				SucessInfo( xmlhttp.responseText);
+			}
+			else if ( xmlhttp.status == 404 )
+
+			{
+				failCall(xmlhttp.status)
+
+			}
+			else if ( xmlhttp.status == 503 )
+
+			{
+				failCall(xmlhttp.status)
+
+			}
+		}
+
+		xmlhttp.onerror=function()
+
+		{
+
+			failCall(xmlhttp.status);
+
+		}
+
+		xmlhttp.onabort=function()
+
+		{
+
+			alert("Aborted");
+
+		}
+
+		xmlhttp.open("DEVICEINFO", uri, true );
+
+		xmlhttp.send();
+
+	}
+	function	SucessInfo( result )
+	{
+			alert(result);
+	} 
+
+	function	failCall ( status )
+	{
+		
+		/* 	
+			If you reach here, user is probabaly not running the 
+			service. Redirect the user to a page where he can download the
+			executable and install it. 
+		*/
+		alert("Check if RDSERVICE is running ");
+
+	}
+
+</script>
+
+</body></html>

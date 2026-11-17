@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<GRIPS_EPAYMENT>
+  <Dept_Cd>083</Dept_Cd>
+  <Service_Cd>001</Service_Cd>
+  <Dept_Ref_No>0832014999999999</Dept_Ref_No>
+  <Identification_No>789456123</Identification_No>
+  <Deposited_By>Mayflower</Deposited_By>
+  <Depositor_Mobile_No>9456781235</Depositor_Mobile_No>
+  <Depositor_Email_Id>test@gmail.com</Depositor_Email_Id>
+  <In_Favor_Of>RGM Office</In_Favor_Of>
+  <Rtn_Prd_Frm>01122014</Rtn_Prd_Frm>
+  <Rtn_Prd_To>31122014</Rtn_Prd_To>
+  <Payment_Mode>1</Payment_Mode>
+  <Total_Amount>100</Total_Amount>
+  <Remarks>Fees for Marriage Registration</Remarks>
+  <Repeated_head row="1">
+    <Head_Of_Account>0070-60-108-001-12</Head_Of_Account>
+    <Amount>100</Amount>
+  </Repeated_head>
+</GRIPS_EPAYMENT>

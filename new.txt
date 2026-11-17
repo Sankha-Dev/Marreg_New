@@ -1,0 +1,28 @@
+﻿{
+   "data": [
+      {
+         "id":"1",
+         "place":"DARJEELING",         
+         "hm":"Y",
+         "sm":"Y"
+      },
+      {
+         "id":"2",
+         "place":"BAGDOGRA",
+         "hm":"N",
+         "sm":"Y"
+      },
+      {
+         "id":"3",
+         "place":"GORUBATHAN",
+         "hm":"Y",
+         "sm":"N"
+      },
+      {
+         "id":"4",
+         "place":"JOREBUNGALOW",
+         "hm":"Y",
+         "sm":"N"
+      }
+   ]
+}
